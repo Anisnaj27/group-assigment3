@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.nav-left img {
+  width: 50px;
+  height: auto;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.nav-right a:hover {
+  background-color: #ad9410;
+  border-radius: 5px;
+}
+
+#searchInput {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.hotel-container {
+  background: #d6c610;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+}
+
+.hotel {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 12px;
+}
+
+.hotel:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" target="_top">
+      <img src="Aurora.jpg" alt="logo">
+    </a>
+  </div>
+
+  <div class="nav-right">
+
+    <a href="about.html" target="center">About Us</a>
+    <a href="gallery.html" target="center">Our Gallery</a>
+    <a href="feedback.html" target="center">Feedback</a>
+
+    <!-- SEARCH -->
+    <input type="text" id="searchInput" placeholder="Search hotel..."
+    onkeyup="searchHotel()">
+
+  </div>
+
+</div>
+
+<div class="hotel-container">
+
+  <div class="hotel" onclick="openHotel('zaques.html')">
+    Zacques Hotel
+  </div>
+
+  <div class="hotel" onclick="openHotel('serimalaysia.html')">
+    Hotel Seri Malaysia
+  </div>
+
+  <div class="hotel" onclick="openHotel('SPCENTRAL.html')">
+    SP Central Hotel
+  </div>
+
+  <div class="hotel" onclick="openHotel('elzahra.html')">
+    El-Zahraa Hotel
+  </div>
+
+  <div class="hotel" onclick="openHotel('amanjaya.html')">
+    Amanjaya Hotel
+  </div>
+
+  <div class="hotel" onclick="openHotel('theblanket.html')">
+    The Blanket Hotel
+  </div>
+
+
+  <div class="hotel" onclick="openHotel('ErnestHotel.html')">
+    Ernes Hotel
+  </div>
+
+  <div class="hotel" onclick="openHotel('MSpice.html')">
+    M Spice Hotel
+  </div>
+
+  <div class="hotel" onclick="openHotel('hotel.html')">
+    S Hotel
+  </div>
+
+  <div class="hotel" onclick="openHotel('sunsega.html')">
+    Sunsega Hotel
+  </div>
+
+</div>
+
+<script>
+function searchHotel() {
+    let input = document.getElementById("searchInput");
+    let filter = input.value.toUpperCase();
+    let hotels = document.getElementsByClassName("hotel");
+
+    for (let i = 0; i < hotels.length; i++) {
+        let txtValue = hotels[i].textContent || hotels[i].innerText;
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            hotels[i].style.display = "";
+        } else {
+            hotels[i].style.display = "none";
+        }
+    }
+}
+
+function openHotel(page) {
+    parent.center.location = page;
+}
+</script>
+</body>
+</html>
