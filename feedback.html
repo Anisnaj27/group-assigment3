@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feedback Form</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: url("backgroundtwo.jpg");
+  background-size: cover;
+}
+
+h1 {
+  color: #d9d9d9;
+  font-family: Elephant;
+  font-size: 300%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-box {
+  background-color: grey;
+  width: 800px;
+  max-width: 90%;
+  border: 15px solid black;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: inline-block;
+  width: 130px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 5px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.question {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.button-group {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  background: green;
+  color: white;
+}
+
+input[type="reset"] {
+  background: red;
+  color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>FEEDBACK</h1>
+
+<div class="form-box">
+
+<h2>Personal Information</h2>
+
+<form action="MAILTO: auroraa0star@gmail.com" method="post" enctype="text/plain">
+
+<div class="form-group">
+  <label>Name:</label>
+  <input type="text" name="fullname" required>
+</div>
+
+<div class="form-group">
+  <label>No Phone:</label>
+  <input type="number" name="phone" required>
+</div>
+
+<div class="form-group">
+  <label>Email:</label>
+  <input type="email" name="email" required>
+</div>
+
+<div class="form-group">
+  <label>Gender:</label>
+  <input type="radio" name="gender" value="Male"> Male
+  <input type="radio" name="gender" value="Female"> Female
+</div>
+
+<div class="form-group">
+  <label>Date:</label>
+  <input type="date" name="date" required>
+</div>
+
+<hr>
+
+<h3>Overall Review</h3>
+
+<div class="question">1. Which hotel review did you find most helpful?</div>
+<input type="radio" name="q1" value="Zaques Hotel"> Zaques Hotel<br>
+<input type="radio" name="q1" value="Hotel Seri Malaysia SP"> Hotel Seri Malaysia SP<br>
+<input type="radio" name="q1" value="SP Central Hotel"> SP Central Hotel Sungai Petani<br>
+<input type="radio" name="q1" value="Hotel El-Zahra"> Hotel El-Zahra<br>
+<input type="radio" name="q1" value="Amanjaya Hotel"> Amanjaya Hotel<br>
+<input type="radio" name="q1" value="ERNES Hotel"> ERNES Hotel<br>
+<input type="radio" name="q1" value="M Spice Hotel"> M Spice Hotel<br>
+<input type="radio" name="q1" value="S Hotel"> S Hotel<br>
+<input type="radio" name="q1" value="Sunsega Hotel"> Sunsega Hotel<br>
+
+<div class="question">2. How would you rate the quality of our hotel reviews?</div>
+<input type="radio" name="q2" value="Yes"> Yes
+<input type="radio" name="q2" value="No"> No
+<input type="radio" name="q2" value="Partially"> Partially
+
+<div class="question">3. Was the information accurate and useful?</div>
+<input type="radio" name="q3" value="Yes"> Yes
+<input type="radio" name="q3" value="No"> No
+<input type="radio" name="q3" value="Partially"> Partially
+
+<div class="question">4. Which aspect was most useful?</div>
+<input type="radio" name="q4" value="Room"> Room information
+<input type="radio" name="q4" value="Facilities"> Facilities
+<input type="radio" name="q4" value="Location"> Location
+<input type="radio" name="q4" value="Price"> Price comparison
+
+<div class="question">5. How easy was it to navigate?</div>
+<input type="radio" name="q5" value="Very easy"> Very easy
+<input type="radio" name="q5" value="Easy"> Easy
+<input type="radio" name="q5" value="Neutral"> Neutral
+<input type="radio" name="q5" value="Difficult"> Difficult
+<input type="radio" name="q5" value="Very difficult"> Very difficult
+<div class="question">6. Did the website look attractive?</div>
+<input type="radio" name="q6" value="Strongly agree"> Strongly agree
+<input type="radio" name="q6" value="Agree"> Agree
+<input type="radio" name="q6" value="Neutral"> Neutral
+<input type="radio" name="q6" value="Disagree"> Disagree
+<input type="radio" name="q6" value="Strongly disagree"> Strongly disagree
+
+<div class="question">7. Would you use this website again?</div>
+<input type="radio" name="q7" value="Yes"> Yes
+<input type="radio" name="q7" value="No"> No
+<input type="radio" name="q7" value="Maybe"> Maybe
+
+<div class="question">8. Overall rating</div>
+<input type="radio" name="q8" value="Excellent"> Excellent
+<input type="radio" name="q8" value="Very good"> Very good
+<input type="radio" name="q8" value="Good"> Good
+<input type="radio" name="q8" value="Fair"> Fair
+<input type="radio" name="q8" value="Poor"> Poor
+
+<div class="question">9. Suggestions:</div>
+<textarea rows="4" cols="60" name="suggestions"></textarea>
+
+<div class="button-group">
+  <input type="submit" value="Send">
+  <input type="reset" value="Reset">
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

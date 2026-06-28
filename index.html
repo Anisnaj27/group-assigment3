@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+.gallery{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+}
+
+.image {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 350px;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+.testbtn {
+  background-color: #ad9410;
+  color: white;
+  font-size: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.testbtn:hover {
+  background-color: #d6c610;
+}
+</style>
+</head>
+
+<body>
+<body background="indexbg.jpg">
+
+<h1 style="background-color:#ffffff;color:#ad9410;font-family:Elephant;font-size:300%;align:center"><marquee>Welcome To Our Website!&#128171</marquee></h1>
+
+<center>
+<div class="gallery">
+<div class="container">
+  <img src="suraya.jpg" alt="Avatar" class="image">
+  <div class="overlay">Aisha Suraya</div>
+</div>
+<div class="container">
+  <img src="akish.jpg" alt="Avatar" class="image">
+  <div class="overlay">Nur Auni Balkis</div>
+</div>
+<div class="container">
+  <img src="ayuni.jpg" alt="Avatar" class="image">
+  <div class="overlay">Syairah Ayuni</div>
+</div>
+<div class="container">
+  <img src="anis.jpg" alt="Avatar" class="image">
+  <div class="overlay">Nur Anis Najwa</div>
+</div>
+<div class="container">
+  <img src="afiqah.jpg" alt="Avatar" class="image">
+  <div class="overlay">Nurul Afiqah</div>
+</div>
+</center>
+
+
+<p></p>
+<center><h1 style="color:#ffffff;font-family:Segoe Script;font-size:100%;">"Every journey begins with affordable hotel. Explore, compare and choose your perfect stay."</h1></center>
+<p></p>
+<center><button onclick="window.location.href='MyFrame.html'" class="testbtn">Let's Gaur!!</button></center>
+
+<footer style="text-align:center; color: white; padding:10px;">
+  © 2026 Aurora Star Sdn. Bhd.
+</footer>
+
+</body>
+</html>
